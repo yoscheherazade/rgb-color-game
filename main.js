@@ -22,9 +22,17 @@ function setModeButtons() {
         modeButtons[i].addEventListener("click", function() {
           modeButtons[0].classList.remove("selected");
           modeButtons[1].classList.remove("selected");
+          modeButtons[2].classList.remove("selected");
           this.classList.add("selected");
           //ternary operator instead of if-else
-          this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
+          //this.textContent === "Easy" ? numSquares = 3: "Medium" ? numSquares = 6: numSquares = 10;
+          if (this.textContent === "Easy") {
+              numSquares = 3;
+          } else if (this.textContent === "Medium") {
+              numSquares = 6;
+          } else {
+              numSquares = 9;
+          }
           reset();
         });
     }
