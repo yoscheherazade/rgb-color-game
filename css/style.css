@@ -20,7 +20,8 @@ h1 {
 }
 
 #container {
-    max-width: 600px;
+    max-width: 400px;
+    max-height: 50vh;
     margin: 20px auto;
 
 }
